@@ -1,11 +1,47 @@
-// module.exports = {
+module.exports = {
 
-//     content: [
-//         "./node_modules/flowbite/**/*.js"
-//     ],
+    content: [
+        "./node_modules/flowbite/**/*.js"
+    ],
 
-//     plugins: [
-//         require('flowbite/plugin')
-//     ]
+    plugins: [
+        require('flowbite/plugin')
+    ],
 
-// }
+    theme: {
+        fontFamily: {
+            'sans': ['Inter'],
+        },
+        container: {
+            center: true,
+            screens: {
+                xl: '1170px',
+            },
+        },
+        extend: {
+            colors: {
+                clifford: '#da373d',
+            },
+        },
+    }
+
+}
+
+tailwind.config = {
+    theme: {
+        fontFamily: {
+            'sans': ['Inter'],
+        },
+        container: {
+            center: true,
+            screens: {
+                xl: '1170px',
+            },
+        },
+        extend: {
+            colors: {
+                clifford: '#da373d',
+            },
+        },
+    }
+}

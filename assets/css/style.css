@@ -283,49 +283,6 @@ button {
     color: #217BF4;
 }
 
-#achievments .contentT2 a {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-
-    /* identical to box height, or 100% */
-
-    color: #217BF4;
-
-}
-
-#achievments .contentT2 h1 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 48px;
-
-    /* or 133% */
-
-    color: #0A093D;
-}
-
-#achievments .contentT2 p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-
-    /* or 175% */
-
-    color: #656464;
-}
-
-#achievments .contentT2 button {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-
-    /* identical to box height, or 100% */
-    text-align: center;
-    letter-spacing: -0.02em;
-
-    color: #FFFFFF;
-}
-
 #main {
     background: linear-gradient(0deg, rgba(241, 246, 253, 0) 1.63%, #F1F6FD 20.5%, #F1F6FD 58.57%, #FFFFFF 100%);
 }
@@ -377,20 +334,13 @@ button {
 
 }
 
-#app .container .content {}
-
-
 #news .cards .card-text h4 {
     font-weight: 600;
-
 }
 
 #news .cards .card-text .href a {
     font-weight: 400;
-
-    /* identical to box height, or 100% */
     text-align: center;
-
 }
 
 #footer .li-header {
@@ -399,29 +349,4 @@ button {
 
 #footer li {
     font-weight: 400;
-}
-
-#footer .contentT3 h3 {
-    font-weight: 500;
-}
-
-#footer .contentT3 p {
-    font-weight: 400;
-
-}
-
-#footer .contentT3 input {
-    font-weight: 400;
-}
-
-#footer .contentT3 button {
-    font-weight: 500;
-}
-
-#footer .container .brand:first-child p {
-    font-weight: 400;
-}
-
-#footer .flex h1 {
-    font-weight: 600;
 }
