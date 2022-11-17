@@ -1,0 +1,507 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'sans': ['Inter'],
+                },
+                container: {
+                    center: true,
+                    screens: {
+                        xl: '1170px',
+                    },
+                },
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                },
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+
+</head>
+
+<body class="">
+    <nav class="bg-white hidden border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="header" class="fixed w-screen z-50 bg-transparent bg-white/10">
+        <div class="container flex flex-wrap lg:flex-nowrap justify-between gap-2 lg:gap-[72px] items-center pt-[22px] pb-[18px] border-b-[1px]
+            border-solid border-[#217BF4]/10">
+            <div class="img-box flex items-center">
+                <img src="./assets/img/logo.png" alt="">
+            </div>
+            <button data-collapse-toggle="navbar-defaults" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-defaults" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div id="navbar-defaults" class="lg:block hidden w-full">
+                <div class="flex items-center justify-between flex-col md:flex-row gap-10">
+                    <div class="menu-navigation flex items-center">
+                        <ul class="flex flex-col md:flex-row gap-8">
+                            <li><a href="#" class="active">Home</a></li>
+                            <li class="navcom flex gap-[5px] items-center">
+                                <a href="#">Community</a>
+                                <img src="./assets/img/CaretDown.png" class=" object-contain" alt="">
+                            </li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-action flex md:flex-row gap-5 items-baseline">
+                        <div class="search-box flex gap-2 items-center bg-transparent">
+                            <div class="img-box p-[1.5px]">
+                                <img src="./assets/img/MagnifyingGlass.png" class="place-self-center" alt="">
+                            </div>
+                            <form action="#">
+                                <input type="text"
+                                    class="w-full bg-transparent focus:outline-none focus:ring-transparent border-0"
+                                    placeholder="Search here...">
+                            </form>
+
+                        </div>
+                        <div class="button-box text-white py-[18px] px-[42px] rounded-[14px] bg-blue-500 border-">
+                            <button>Log in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class=" bg-gradient-to-br from-white to-[#D4E7FE]">
+        <div
+            class="container flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center pt-[172px] pb-[82.53px] gap-[69px] mb-24">
+            <div class="contentT">
+                <button class="py-3 px-[30px] mb-5 rounded-lg bg-[#217BF4]/10">Netbook community</button>
+                <h1 class="mb-[18px]">Your Solutions For Community!</h1>
+                <p class="mb-[42px]">More than 2 billion people in over countries use socibook to stay in touch with
+                    friends & family.</p>
+                <div class="btn-hero flex gap-[18px]">
+                    <button class="btn-blue bg-[#217BF4] py-6 px-[42px] rounded-[14px]">About More</button>
+                    <button
+                        class="btn-white bg-transparent border-[#217BF4] border-[1px] py-6 px-[42px] rounded-[14px]">Invite
+                        Friend</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./assets/img/Iamge.png" class="object-cover hover:animate-none lg:min-w-[585.52px]" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <div class="container flex flex-wrap lg:flex-nowrap py-[34px] items-center gap-12 lg:gap-[200px] mb-[21px]">
+            <div class="box-title w-[406px]">
+                <a href="#" class="mb-[10px]">Whats Netboks?</a>
+                <h1 class="mb-4">Why Join to Netbook Social Network?</h1>
+                <p class="mb-9">Recent surveys have indicated that small businesses recognise the need they have to
+                    connect with consumer.</p>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-3">Groups</li>
+                    <li class="flex items-center gap-3">Messages</li>
+                    <li class="flex items-center gap-3">Share</li>
+                </ul>
+            </div>
+            <div
+                class="about-img flex flex-row items-end lg:items-start lg:flex-col flex-wrap gap-8  lg:h-[508px] justify-center">
+                <img src="./assets/img/image.png" class="w-2/5 lg:w-auto max-w-[270px]" alt="">
+                <img src="./assets/img/image(1).png" class="w-2/5 lg:w-auto max-w-[270px]" alt="">
+                <img src="./assets/img/image(2).png" class="w-2/5 lg:w-auto max-w-[270px]" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="achievments">
+        <div
+            class="container flex flex-wrap-reverse justify-center lg:flex-nowrap py-[84px] gap-10 lg:gap-[93px] items-center mb-[55px]">
+            <div class="cards flex overflow-scroll lg:overflow-auto lg:flex-nowrap gap-6">
+                <div
+                    class="card hover:shadow-2xl shadow-2xl min-w-[336px] max-w-[336px] pt-[42px] pr-[18px] pb-10 pl-11">
+                    <div class="cardh flex gap-[10px] items-center mb-8">
+                        <img src="./assets/img/Vector.svg" alt="">
+                        <h4 class="">4.8 Rating</h4>
+                    </div>
+                    <div class="cardh1 flex gap-4 mb-[37px] items-center">
+                        <div class="people w-[60px] h-6">
+                            <img src="./assets/img/people.png" alt="" class="">
+                        </div>
+                        <h5 class=""><span>+836k</span> Members</h5>
+                    </div>
+                    <p class="mb-10">More than 2 billion we people over countries use socibooks we to stay in touch with
+                        friends.</p>
+                    <div class="href flex gap-2">
+                        <a href="#" class="">Join Our Community</a>
+                        <img src="./assets/img/ArrowRight.svg" alt="">
+                    </div>
+                </div>
+                <div
+                    class="card hover:shadow-2xl shadow-2xl min-w-[336px] max-w-[336px] pt-[42px] pr-[18px] pb-10 pl-11">
+                    <div class="cardh flex gap-[10px] items-center mb-[35px]">
+                        <img src="./assets/img/Trophy.png" alt="">
+                        <h4>Awwwards</h4>
+                    </div>
+                    <div class="cardh1 flex gap-4 mb-[37px] items-center">
+                        <div class="people w-6 h-6">
+                            <img src="./assets/img/Ellipse 17.png" class="object-none" alt="">
+                        </div>
+                        <h5>Best of <span>2021</span> on Github</h5>
+                    </div>
+                    <p class="mb-10">More than 2 billion we people over countries use socibooks we to stay in touch with
+                        friends.</p>
+                    <div class="href flex gap-2">
+                        <a href="" class="disabled">Go To Awards</a>
+                        <img src="./assets/img/ArrowRight(1).svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="box-title w-[381px] flex flex-col justify-center lg:block text-center lg:text-left">
+                <a href="#" class="mb-[10px]">Our Achievement</a>
+                <h1 class="mb-[18px]">We are Connecting You The Digital Life.</h1>
+                <p class="mb-[38px]">The scope the Social Media becomes crucial Is helps the business to directly engage
+                    with their needs
+                    and wants.</p>
+                <div class="href flex justify-center lg:block">
+                    <button class="py-[21px] px-[38px] bg-[#217BF4] rounded-[14px] text-white flex gap-5">Discover me
+                        <img src="./assets/img/ArrowRight(2).png" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main">
+        <div class="container flex flex-col justify-center items-center pt-[60px] pb-20 mb-[46px]">
+            <div class="box-title max-w-[441px] text-center mb-16">
+                <a href="#" class="mb-[9px]">Our Community</a>
+                <h1 class="mb-[19px]">Community Main Feature</h1>
+                <p>The wise man therefore always holds in these matters to this principle of selection.</p>
+            </div>
+            <div class="cards flex justify-center flex-wrap gap-11">
+                <div class="card flex flex-row-reverse lg:flex-row max-w-[522px] bg-white">
+                    <img src="./assets/img/card-item/Icon(6).png" alt="">
+                    <div class="card-item">
+                        <h3>Members, Friends</h3>
+                        <p class="text-[12px] leading-5 lg:text-[16px] lg:leading-[26px] font-normal text-[#656464]">
+                            Members, Friends Connection ( like followers ), Private Message</p>
+                    </div>
+                </div>
+                <div class="card flex flex-row-reverse lg:flex-row max-w-[522px] bg-white">
+                    <img src="./assets/img/card-item/Icon(1)(1).png" alt="">
+                    <div class="card-item">
+                        <h3>Groups</h3>
+                        <p class="text-[12px] leading-5 lg:text-[16px] lg:leading-[26px] font-normal text-[#656464]">
+                            Your users can create groups to let other users to join and talk</p>
+                    </div>
+                </div>
+                <div class="card flex flex-row-reverse lg:flex-row max-w-[522px] bg-white">
+                    <img src="./assets/img/card-item/Icon(2)(1).png" alt="">
+                    <div class="card-item">
+                        <h3>Forum</h3>
+                        <p class="text-[12px] leading-5 lg:text-[16px] lg:leading-[26px] font-normal text-[#656464]">
+                            Forum is ready by BBPress. Your users can make topics and talk.</p>
+                    </div>
+                </div>
+                <div class="card flex flex-row-reverse lg:flex-row max-w-[522px] bg-white">
+                    <img src="./assets/img/card-item/Icon(3)(1).png" alt="">
+                    <div class="card-item">
+                        <h3>Custom Module</h3>
+                        <p class="text-[12px] leading-5 lg:text-[16px] lg:leading-[26px] font-normal text-[#656464]">You
+                            can create Members, Groups Module. We already created 3 modules. It's by drag & drop live
+                            builder.</p>
+                    </div>
+                </div>
+                <div class="card flex flex-row-reverse lg:flex-row max-w-[522px] bg-white">
+                    <img src="./assets/img/card-item/Icon(4)(1).png" alt="">
+                    <div class="card-item">
+                        <h3>List Builder</h3>
+                        <p class="text-[12px] leading-5 lg:text-[16px] lg:leading-[26px] font-normal text-[#656464]">
+                            Members, Groups list can be modified by drag & drop live builder.</p>
+                    </div>
+                </div>
+                <div class="card flex flex-row-reverse lg:flex-row max-w-[522px] bg-white">
+                    <img src="./assets/img/card-item/Icon(5)(1).png" alt="">
+                    <div class="card-item">
+                        <h3>List Scroll Effect</h3>
+                        <p class="text-[12px] leading-5 lg:text-[16px] lg:leading-[26px] font-normal text-[#656464]">8
+                            different scroll effects are ready.
+                            You can always change by your tastes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="members">
+        <div class="container flex justify-center items-center flex-col pt-[84px] mb-[46px]">
+            <div class="box-title max-w-[454px] text-center mb-16">
+                <a href="#" class="mb-[10px]">Valuable Team</a>
+                <h1 class="mb-[18px]">Our Active Members</h1>
+                <p>when an unknown printer took a galley of type and meeting fari scrambled it.</p>
+            </div>
+            <div
+                class="filters flex-wrap justify-center lg:flex-nowrap flex gap-[3px] p-2 bg-[#217BF4]/[0.06] items-center mb-11">
+                <button
+                    class="button focus:bg-[#217BF4] text-[#2F2C4A] focus:text-white text-[16px] leading-4 font-medium py-5 px-[50px] rounded-[14px]">Newst</button>
+                <button
+                    class="button focus:bg-[#217BF4] text-[#2F2C4A] focus:text-white text-[16px] leading-4 font-medium py-5 px-[50px] rounded-[14px]">Popular</button>
+                <button class="button focus:bg-[#217BF4] text-[#2F2C4A] focus:text-white text-[16px] leading-4 font-medium py-5 px-[50px]
+                    rounded-[14px]">Active</button>
+            </div>
+            <div
+                class="cards flex w-full overflow-scroll lg:overflow-auto justify-start lg:justify-center lg:flex-nowrap">
+                <div class="card lg:hover:shadow-2xl shadow-2xl py-[30px] px-[52px] min-w-[245px]">
+                    <img src="./assets/img/Group 1000000833(1).png" alt="">
+                    <h3 class="mb-[29px]">Fahim Rahman</h3>
+                    <p class="mb-[14px]">@rahman</p>
+                </div>
+                <div class="card lg:hover:shadow-2xl shadow-2xl py-[30px] px-[52px] min-w-[245px]">
+                    <img src="./assets/img/Group 1000000834(1).png" alt="">
+                    <h3 class="mb-[29px]">Kazi Rahman</h3>
+                    <p class="mb-[14px]">@Rahman</p>
+                </div>
+                <div class="card lg:hover:shadow-2xl shadow-2xl py-[30px] px-[52px] min-w-[245px]">
+                    <img src="./assets/img/Group 1000000835(1).png" alt="">
+                    <h3 class="mb-[29px]">Masterero Ali</h3>
+                    <p class="mb-[14px]">@Master</p>
+                </div>
+                <div class="card lg:hover:shadow-2xl shadow-2xl py-[30px] px-[52px] min-w-[245px]">
+                    <img src="./assets/img/Group 1000000836(1).png" alt="">
+                    <h3 class="mb-[29px]">Alia Karon</h3>
+                    <p class="mb-[14px]">@Alia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="app" class=" bg-[#E5F0FD]">
+        <div class="container flex flex-wrap lg:flex-nowrap justify-center items-center gap-10 lg:gap-[354px]
+            min-h-[560px] lg:max-h-[560px] lg:overflow-hidden mb-24">
+            <div class="content text-left max-w-[351px]">
+                <a class="mb-[10px] text-[14px] leading-4 lg:text-[18px] lg:leading-[18px] text-[#217BF4] font-medium"
+                    href="#">Get Our Aplication</a>
+                <h1
+                    class="mb-[18px] text-[28px] leading-[36px] lg:text-[36px] lg:leading-[52px] text-[#0A093D] font-bold">
+                    You Can Easily Find This App…!</h1>
+                <p
+                    class="mb-[36px] text-[12px] leading-[20px] lg:text-[16px] lg:leading-[26px] text-[#656464] font-normal">
+                    I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh
+                    loo brilliant.</p>
+                <div class="app-button flex gap-5">
+                    <button class="btn-app w-[90%] lg:w-full"><img src="./assets/img/image 288(1).png" alt=""></button>
+                    <button class="btn-play w-[90%] lg:w-full"><img src="./assets/img/image 289(1).png" alt=""></button>
+                </div>
+            </div>
+            <img src="./assets/img/mobile muckup(1)(1).png" alt=""
+                class="relative top-0 lg:top-[134px] w-[70%] lg:w-[100%] max-w-[441px]">
+        </div>
+    </section>
+    <section id="news">
+        <div class="container flex flex-col justify-center items-center py-[34px]">
+            <div class="box-title text-center">
+                <a href="" class="mb-[10px]">Get Our
+                    Aplication</a>
+                <h1 class="mb-20">Latest News
+                </h1>
+            </div>
+            <div class="cards items-start flex gap-2 lg:gap-[75px]">
+                <div class="card flex flex-col justify-center w-1/3">
+                    <img src="./assets/img/news card/Image.png" alt="" class="mb-[25px]">
+                    <div
+                        class="card-item flex flex-col lg:flex-row text-xs text-[#2F2C4A] lg:text-xl lg:items-baseline gap-[14px]">
+                        <img src="./assets/img/news card/Line 3.png" alt="" class="max-w-[39px] max-h-[2px]">
+                        <div class="card-text">
+                            <h4 class="mb-6">It Does Not Matter Hows Slowly go as Long</h4>
+                            <div class="href disabled flex gap-[1px] lg:gap-2 items-center text-xs lg:text-sm">
+                                <a>Continue Reading</a>
+                                <img src="./assets/img/ArrowRight(3).svg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card flex flex-col justify-center w-1/3">
+                    <img src="./assets/img/news card/Image(1).png" alt="" class="mb-[25px]">
+                    <div
+                        class="card-item flex flex-col lg:flex-row text-xs text-[#2F2C4A] lg:text-xl lg:items-baseline gap-[14px]">
+                        <img src="./assets/img/news card/Line 3.png" alt="" class="max-w-[39px] max-h-[2px]">
+                        <div class="card-text">
+                            <h4 class="mb-6">Netbook Network Added New Photo Filter</h4>
+                            <div class="href enabled flex gap-[1px] lg:gap-2 items-center text-xs lg:text-sm">
+                                <a>Continue Reading</a>
+                                <img src="./assets/img/ArrowRight(3).svg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card flex flex-col justify-center w-1/3">
+                    <img src="./assets/img/news card/Image(2).png" alt="" class="mb-[25px]">
+                    <div
+                        class="card-item flex flex-col lg:flex-row text-xs text-[#2F2C4A] lg:text-xl lg:items-baseline gap-[14px]">
+                        <img src="./assets/img/news card/Line 3.png" alt="" class="max-w-[39px] max-h-[2px]">
+                        <div class="card-text">
+                            <h4 class="mb-6">We Optimised Netbooks Better Navigation</h4>
+                            <div class="href disabled flex gap-[1px] lg:gap-2 items-center text-xs lg:text-sm">
+                                <a>Continue Reading</a>
+                                <img src="./assets/img/ArrowRight(3).svg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer" class=" bg-[#2B2B39]">
+        <div
+            class="container pt-[74px] pb-[85px] flex gap-36 justify-center lg:justify-between flex-wrap lg:flex-nowrap">
+            <div class="link flex justify-between w-full lg:w-[62%] pb-[22px]">
+                <div class="row w-1/4 m-2">
+                    <ul class="list-none flex flex-col gap-[22px] text-xs text-[#E7E7E7]">
+                        <li class="li-header text-base text-white">Home</li>
+                        <li>Home</li>
+                        <li>Community</li>
+                        <li>Events</li>
+                        <li>Contacs</li>
+                    </ul>
+                </div>
+                <div class="row w-1/4 m-2">
+                    <ul class="list-none flex flex-col gap-[22px] text-xs text-[#E7E7E7]">
+                        <li class="li-header text-base text-white">Resources</li>
+                        <li>Blog</li>
+                        <li>News</li>
+                        <li>Guides</li>
+                        <li>Help-center</li>
+                    </ul>
+                </div>
+                <div class="row w-1/4 m-2">
+                    <ul class="list-none flex flex-col gap-[22px] text-xs text-[#E7E7E7]">
+                        <li class="li-header text-base text-white">Community</li>
+                        <li>NewFeed</li>
+                        <li>Profile</li>
+                        <li>Friends</li>
+                        <li>Forums</li>
+                    </ul>
+                </div>
+                <div class="row w-1/4 m-2">
+                    <ul class="list-none flex flex-col gap-[22px] text-xs text-[#E7E7E7]">
+                        <li class="li-header text-base text-white">Main Links</li>
+                        <li>Members</li>
+                        <li>Activity</li>
+                        <li>Groups</li>
+                        <li>Private Groups</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contentT3 flex flex-col lg:block lg:w-[33%] items-center text-center lg:text-left">
+                <h3 class="mb-[18px] w-[180px] text-base lg:text-5 lg:leading-8 text-white">Subscribe Cirkle Newsletter
+                </h3>
+                <p class="mb-8 w-[300px] text-xs lg:text-4 lg:leading-7 text-[#E7E7E7]">Subscribe to be the first one
+                    to know about
+                    updates. Enter
+                    your email</p>
+                <form action="#!" class="border-white border-[1px] border-solid rounded-xl flex">
+                    <input type="text" class="bg-transparent rounded-xl text-[11px] leading-0 lg:text-[14px] lg:leading-[48px]
+                        text-[#717179]" placeholder="Email address">
+                    <button class="py-4 px-6 bg-white rounded-xl text-[12px]
+                        leading-0 lg:text-[16px] lg:leading-4 text-[#2B2B39]">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="wrapper bg-[#20202D]">
+            <div
+                class="container flex flex-wrap justify-evenly lg:flex-nowrap gap-6 lg:gap-4 lg:justify-between items-center py-[30px]">
+                <div class="brand text-xs lg:text-[14px] lg:leading-[14px] text-[#F6F6F6]">
+                    <p>Besnik Creative Agency.</p>
+                </div>
+                <div
+                    class="brand flex justify-center items-center gap-[6px] text-[20px] leading-5 lg:text-[24px] lg:leading-6 text-white">
+                    <img src="./assets/img/footer-item/Group.png" alt="">
+                    <h1>Netbook</h1>
+                </div>
+                <div class="brand">
+                    <ul class="flex gap-2">
+                        <li class="bg-white rounded-full p-[7px]"><img src="./assets/img/footer-item/Frame.png" alt="">
+                        </li>
+                        <li class="bg-white rounded-full p-[7px]"><img src="./assets/img/footer-item/Frame(1).png"
+                                alt="">
+                        </li>
+                        <li class="bg-white rounded-full p-[7px]"><img src="./assets/img/footer-item/Frame(2).png"
+                                alt="">
+                        </li>
+                        <li class="bg-white rounded-full p-[7px]"><img src="./assets/img/footer-item/Linkedin.png"
+                                alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-black h-[1000px]"></section>
+    <!-- <script src="../path/to/flowbite/dist/flowbite.js"></script> -->
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+
+</body>
+
+</html>
