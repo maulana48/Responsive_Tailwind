@@ -1,3 +1,3 @@
-.container {
-    width: 1170px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
